@@ -1,0 +1,15 @@
+Python scripts in charge of collecting base information about the status of traffic and additional attributes like weather and traffic incidents, necessary for developing the predictive models. We are making use of APIs with enough free requests to our objective and gathering frequency. Python scripts are running in a virtual instance where with Linux services and Crontab allow us being gathering data continuously. This raw information is saved in a SQL database. Scheme of the information collected and stored:
+
+Baseline information about the status of traffic:
+
+Here Traffic API ------------------------> HereData Table
+TomTom Traffic API-----------------------> TomTomData Table
+Additional attributes:
+
+Weather:
+
+OpenWeather API--------------------------> Weather Table Data
+DarkSky API------------------------------> Weather Table Data
+Traffic incidents:
+
+Here Traffic API-------------------------> HereIncidentData Table
